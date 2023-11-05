@@ -1,0 +1,172 @@
+/* Establece un fondo degradado con colores neon */
+body {
+    background: linear-gradient(135deg, #00ffcc, #2600ff);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenido se extienda al menos al 100% de la altura de la ventana. */
+}
+
+/* Estilo del encabezado */
+header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo transparente */
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilo de la sección de productos */
+.productos {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-grow: 1; /* Permite que la sección de productos crezca para llenar el espacio restante. */
+}
+
+.producto {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.producto img {
+    width: 300px;
+    border: 5px solid #0011ff; /* Borde con color neon */
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 24px;
+    color: #00ffcc; /* Color neon para el precio */
+}
+
+button {
+    background: #0011ff; /* Fondo con color neon */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo del pie de página */
+footer {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    align-self: flex-end; /* Alinea el pie de página en la parte inferior de la pantalla. */
+}
+
+/* Estilo del mensaje de oferta especial */
+#special-offer {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fffb00; /* Color neon */
+    margin-top: 30px;
+    animation: pulse 2s infinite; /* Aplica la animación "pulse" */
+}
+
+/* Define la animación "pulse" */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo de los copos de nieve */
+.snowflake {
+    position: fixed;
+    width: 50px; /* Ajusta el tamaño de los copos según tus preferencias */
+    height: 50px;
+    background-image: url('media/img/gratis-png-copos-de-nieve.png'); /* Ruta de tu imagen de copo de nieve */
+    background-size: cover;
+    pointer-events: none; /* Evita que los copos de nieve sean clicables */
+    opacity: 0.8; /* Ajusta la opacidad según tus preferencias */
+}
+
+/* Copo de nieve izquierdo */
+.snowflake.left {
+    top: 10px; /* Ajusta la posición vertical según tus preferencias */
+    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
+}
+
+/* Copo de nieve derecho */
+.snowflake.right {
+    top: 10px; /* Ajusta la posición vertical según tus preferencias */
+    right: 10px; /* Ajusta la posición horizontal según tus preferencias */
+}
+
+/* Estilo del menú principal */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.colores > img{
+    height: 160px;
+}
+.colores > p{
+    font-size: 30px;
+    font-weight: bold;
+}
+/* Resto de tu CSS ... */
