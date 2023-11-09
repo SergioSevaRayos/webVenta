@@ -1,46 +1,79 @@
-/* Establece un fondo degradado con colores neon */
+/* Estilos generales */
 body {
-    background: linear-gradient(135deg, #00ffcc, #2600ff);
-    font-family: Arial, sans-serif;
-    color: #fff;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Asegura que el contenido se extienda al menos al 100% de la altura de la ventana. */
-}
-
-/* Estilo del encabezado */
-header {
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fondo transparente */
-}
-
-h1 {
-    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    background-image: url('media/img/fondos/fondoWeb.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Fondo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
     margin: 0;
-    text-transform: uppercase;
+    padding: 0;
 }
 
-.navbar{
-    background-color:  rgba(0, 0, 0, 0.6); /* Fondo transparente */
-    height: 50px;
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilo para el header */
+header {
+    background-color: rgba(30, 30, 30, 0.8);
+    /* Cabecera semi-transparente */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo para la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(30, 30, 30, 0.8);
+    /* Barra de navegación semi-transparente */
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s;
+    margin: 0 15px;
+}
+
+.navbar a:hover {
+    color: #4CAF50;
+    /* Color verde neon al pasar el ratón */
+}
+
+/* Estilo para la sección de colores */
+.colores {
+    text-align: center;
+    padding: 20px;
+}
+
+.colores p {
+    font-size: 1.5em;
+}
+
+.colores img {
+    width: 100px;
+    margin: 10px;
     
 }
 
-.navbar > a{
-    text-decoration: none;
-    font-size: 20px;
-    padding: 20px;
-    color: white;
-    height: 40px;
-    transition: 0.1s;
-}
-.navbar > a:hover{
-    color: yellow
-
+/* Estilo para el mensaje especial */
+#special-offer {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4CAF50;
+    /* Color verde neon */
+    margin-top: 20px;
 }
 
-/* Estilo de la sección de productos */
 .productos {
     display: flex;
     justify-content: space-around;
@@ -48,39 +81,33 @@ h1 {
     padding: 20px;
     flex-grow: 1; /* Permite que la sección de productos crezca para llenar el espacio restante. */
 }
-
 .producto {
     background: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     margin: 10px;
     padding: 20px;
+    
     text-align: center;
     background-color: transparent;
 }
-
 .producto img {
+    height: 300px;
     width: 300px;
-   /* border: 5px solid #0011ff;  Borde con color neon */
     border-radius: 10px;
-    
 }
-
 h2 {
     font-size: 24px;
     margin: 10px 0;
     text-transform: uppercase;
 }
-
 p {
     font-size: 16px;
     margin: 10px 0;
 }
-
 .precio {
     font-size: 24px;
     color: #00ffcc; /* Color neon para el precio */
 }
-
 button {
     background: #0011ff; /* Fondo con color neon */
     color: #fff;
@@ -91,14 +118,31 @@ button {
     cursor: pointer;
 }
 
-/* Estilo del pie de página */
-footer {
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    align-self: flex-end; /* Alinea el pie de página en la parte inferior de la pantalla. */
+.whatsapp-button {
+    margin-top: 10px;
+    text-align: center;
 }
 
-/* Estilo del mensaje de oferta especial */
+/* Estilo para el pie de página */
+footer {
+    background-color: rgba(30, 30, 30, 0.8);
+    /* Pie de página semi-transparente */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para sombras con colores neon */
+.neon-box {
+    box-shadow: 0 0 10px rgba(124, 252, 0, 0.8);
+    /* Sombra verde neon */
+}
+
+.neon-text {
+    text-shadow: 0 0 10px rgba(124, 252, 0, 0.8);
+    /* Texto con sombra verde neon */
+}
+/* Define la animación "pulse" */
+
 #special-offer {
     font-size: 28px;
     font-weight: bold;
@@ -106,8 +150,6 @@ footer {
     margin-top: 30px;
     animation: pulse 2s infinite; /* Aplica la animación "pulse" */
 }
-
-/* Define la animación "pulse" */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -119,57 +161,3 @@ footer {
         transform: scale(1);
     }
 }
-
-/* Estilo de los copos de nieve */
-.snowflake {
-    position: fixed;
-    width: 50px; /* Ajusta el tamaño de los copos según tus preferencias */
-    height: 50px;
-    background-image: url('media/img/gratis-png-copos-de-nieve.png'); /* Ruta de tu imagen de copo de nieve */
-    background-size: cover;
-    pointer-events: none; /* Evita que los copos de nieve sean clicables */
-    opacity: 0.8; /* Ajusta la opacidad según tus preferencias */
-}
-
-/* Copo de nieve izquierdo */
-.snowflake.left {
-    top: 10px; /* Ajusta la posición vertical según tus preferencias */
-    left: 10px; /* Ajusta la posición horizontal según tus preferencias */
-}
-
-/* Copo de nieve derecho */
-.snowflake.right {
-    top: 10px; /* Ajusta la posición vertical según tus preferencias */
-    right: 10px; /* Ajusta la posición horizontal según tus preferencias */
-}
-
-/* Estilo del menú principal */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centra los elementos horizontalmente */
-}
-
-nav li {
-    margin-right: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-
-.colores > img{
-    height: 160px;
-}
-.colores > p{
-    font-size: 30px;
-    font-weight: bold;
-}
-/* Resto de tu CSS ... */
